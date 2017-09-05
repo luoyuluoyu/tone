@@ -75,10 +75,10 @@
 		</div>
 		<div class="foot1">
 			<span class="foot_content"> 
-			<a href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于腾讯</a>
+			<a href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于char.Mr</a>
 				|<a href="http://kf.qq.com/product/email.html" class="text-muted">客服中心</a>
 				|<a href="#" class="text-muted">联系我们</a> | <a href="#"
-				class="text-muted">帮助中心</a> |<span>©1998 - 2017 Tencent Inc.All Rights Reserved.</span>
+				class="text-muted">帮助中心</a> |<span>©2016 - 2017 char.Mr Inc.All Rights Reserved.</span>
 			</span>
 		</div>
 	</div>

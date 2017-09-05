@@ -49,17 +49,25 @@ public class LoginVaild extends HttpServlet {
 		{
 
 			if(us.Login(userName, passWord))
-			{
-				login = "friendList.jsp?userName="+userName+"";
+			{	
+				String onlineStatus = new UserService().searchUsers(userName).getOnlineStatus();
+				if(onlineStatus.equals("1")){
+					login = "friendList.jsp?userName="+userName+"";
+					
+					
+				}else{
+					request.setAttribute("Message", "∏√’À∫≈“—µ«¬º!");
+					
+				}
 				new UserService().updateUsers(userName, "1");
 				String[] rememberPassword =request.getParameterValues("remenberPwd") ;
 				if(rememberPassword != null){
 					Cookie cookie1 = new Cookie("userName",userName);
 					Cookie cookie2 = new Cookie("passWord",passWord);
 					Cookie cookie3 = new Cookie("remenberPwd","true");
-					cookie1.setMaxAge(3600);
-					cookie2.setMaxAge(3600);
-					cookie3.setMaxAge(3600);
+					cookie1.setMaxAge(3600 * 24 * 3);
+					cookie2.setMaxAge(3600 * 24 * 3);
+					cookie3.setMaxAge(3600 * 24 * 3);
 
 					response.addCookie(cookie1);
 					response.addCookie(cookie2);

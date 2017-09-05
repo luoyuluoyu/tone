@@ -147,15 +147,17 @@ font-color:white;
 #foot1{
 	margin:0 auto;
 
-	background-color:#f5f5f5;
+	background-color:#EFFFD7;
 	height:100px;
 	line-height:100px;
 	text-align:center;
 }
 #content_center{
-height:45%;
+height:30%;
 font-size:16px;
 color:gray;
+padding-top:200px;
+padding-left:-100px;
 }
 #content_table{
 margin:50px 0 0 300px;
@@ -168,10 +170,10 @@ height:30px;
 margin:10px 0 0 200px;
 }
 #selectMethod select{
-margin-left:-250px;
+margin-left:-300px;
 }
 #center_content {
-	margin-left: 200px;
+	margin:0 auto;
 	background-color: #EFFFD7;
 }
 </style>
@@ -179,16 +181,16 @@ margin-left:-250px;
 <body style="margin:0px 0px 0px 0px;">
 	<div style="background-color: #EFFFD7; widows: 1366px; height: 768px">
 			
-				<div style="float: left;">
-					<pre style="display: block;font-size: 40px;font-family:Microsoft YaHei;color:#9ACD32;margin: 20px 0px 0px 30px;">欢迎注册Char.Mr</pre>
+				<div style="float: left;margin:0 auto">
+					<pre style="display: block;font-size: 40px;padding-left:50px;padding-top:50px;font-family:Microsoft YaHei;color:#9ACD32;margin: 20px 0px 0px 30px;">Char.Mr</pre>
 				</div>
 			
 				<div id="center1">
 				<img src="image/newLogo1.png"
 					style="position: absolute; right: 1000px; top: 140px">
 			</div>
-		<div class="content" style="float: left; margin-top: 40px">
-			<div class="web-width" style="float: left;">
+		<div class="content" style="float: left; margin-top: 80px">
+			<div class="web-width" style="float: left;padding-left:200px">
 				<div class="for-liucheng">
 					<div class="liulist for-cur"></div>
 					<div class="liulist for-cur"></div>
@@ -218,12 +220,12 @@ margin-left:-250px;
 		<div id="content_center">
 			<form id="getAccount">
 				<table>
-					<tr>
-						<td>请选择验证身份方式:</td>
-						<td colspan="2" id="selectMethod"><select style="border-radius: 25px;font-size: 14px;border: 1px solid #7d7d7d;">
+					<!-- <tr>
+						<td style="display:inline">请选择验证身份方式:</td>
+						<td colspan="3" id="selectMethod"><select style="width:299px;padding-left:20px;height:30px;border-radius: 25px;font-size: 14px;border: 1px solid #7d7d7d;">
 								<option value="1">手机短信验证</option>
 						</select></td>
-					</tr>
+					</tr> -->
 					<tr>
 						<td>已验证手机:</td>
 						<td><input type="text" id="tel" style="width: 299px; height: 30px; border-radius: 25px; font-size: 14px; border: 1px solid #7d7d7d;"></td>
@@ -231,7 +233,7 @@ margin-left:-250px;
 						<td colspan="2" id="userNames" style="color: red;width: 200px;"></td>
 					</tr>
 					<tr>
-						<td>请填写手机验证码：</td>
+						<td>手机验证码：</td>
 						<td><input type="text" id="checkNumberContent" style="width: 299px; height: 30px; border-radius: 25px; font-size: 14px; border: 1px solid #7d7d7d;"
 							></td>
 						<td><input type="button" value="获取短信验证码" id="checkNumber"
@@ -239,17 +241,17 @@ margin-left:-250px;
 							<td><span name ="isSuccess" id="Verification"style="color: red;width: 200px;"></span></td>
 					</tr>
 				</table>
-				<button onclick="return validates('userNames','Verification',2)" style="height: 30px; width: 100px; margin-right:170px;">确定</button>
+				<button onclick="return validates('userNames','Verification',2)" style="height: 30px; width: 100px; margin-top:20px;margin-right:250px;">确定</button>
 			<p id="Verification" style="color: red"></p>
 			</form>
 		</div>
 		<center>
 		<div id="foot1" style="display: block;font-family:Microsoft YaHei;color:#9ACD32;margin: 80px 0px 0px 30px;">
 			<span id="foot_content"> <a
-				href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于腾讯</a>
+				href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于char.Mr</a>
 				|<a href="http://kf.qq.com/product/email.html" class="text-muted">客服中心</a>
 				|<a href="#" class="text-muted">联系我们</a> |<a href="#"
-				class="text-muted">帮助中心</a> |<span>©1998 - 2017 Tencent Inc.
+				class="text-muted">帮助中心</a> |<span>©2016 - 2017 char.Mr Inc.
 					All Rights Reserved.</span>
 			</span>
 		</div>

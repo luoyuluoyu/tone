@@ -60,8 +60,10 @@ $(document).ready(function(){
 }
 
 #content_center {
-	height: 500px;
+	height: 400px;
+	
 }
+
 </style>
 </head>
 <body style="margin: 0 0 0 0;">
@@ -70,12 +72,12 @@ $(document).ready(function(){
 		<div style="background-color: #EFFFD7; widows: 1366px; height: 768px">
 			
 				<div style="float: left; margin-top: 30px;">
-					<pre style="font-size: 40px;font-family:Microsoft YaHei;color:#9ACD32;margin: 20px 0px 0px 30px;">欢迎注册Char.Mr</pre>
+					<pre style="font-size: 40px;font-family:Microsoft YaHei;color:#9ACD32;margin: 50px 0px 0px 80px;">Char.Mr</pre>
 				</div>
 				<img src="image/newLogo1.png" style="position:absolute;right :1000px;top:140px">
 			
 		<div class="web-width">
-			<div class="for-liucheng" style="float: left;margin-top: 83px;">
+			<div class="for-liucheng" style="float: left;margin-left:160px;margin-top: 83px;">
 				<div class="liulist for-cur"></div>
 				<div class="liulist"></div>
 				<div class="liulist"></div>
@@ -98,11 +100,11 @@ $(document).ready(function(){
 			<!--for-liucheng/-->
 		</div>
 		<div id="content_center">
-			<form   id="getAccount">
+			<form   id="getAccount" style="margin-top:200px">
 				<table>
 					<tr>
 						<td>账号：</td>
-						<td><input type="text" placeholder="用户名" id="username" name="username" style="width: 299px; height: 30px; border-radius: 25px; font-size: 14px; border: 1px solid #7d7d7d;"></td>
+						<td><input type="text" id="username" name="username" style="width: 299px; height: 30px; border-radius: 25px; font-size: 14px; border: 1px solid #7d7d7d"></td>
 						<td colspan="2" id="userName" style="color: #8C8C8C;"></td>
 					</tr>
 					<tr>
@@ -114,17 +116,17 @@ $(document).ready(function(){
 						<td id="checkResult" style="color: #8C8C8C"></td>
 					</tr>
 				</table>
-				<button onclick="return validates('userName','checkResult',1)" style="height: 30px; width: 100px; margin-right:170px;">确定</button>
+				<button onclick="return validates('userName','checkResult',1)" style="height: 30px; width: 100px; margin-right:300px;margin-top:20px">确 定</button>
 		<p  id="Verification" style="color: #8C8C8C"></p>
 			</form>
 		</div>
 		<center>
 		<div>
 			<span id="foot_content" style="display: block;font-family:Microsoft YaHei;color:#9ACD32;margin: 80px 0px 0px 30px;"> <a
-				href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于腾讯</a>
-				|<a href="http://kf.qq.com/product/email.html" class="text-muted">客服中心</a>
+				href="#" class="text-muted">关于char.Mr</a>
+				|<a href="#" class="text-muted">客服中心</a>
 				|<a href="#" class="text-muted">联系我们</a> |<a href="#"
-				class="text-muted">帮助中心</a> |<span>©1998 - 2017 Tencent Inc.
+				class="text-muted">帮助中心</a> |<span>©2016 - 2017 char.Mr Inc.
 					All Rights Reserved.</span>
 			</span>
 		</div>

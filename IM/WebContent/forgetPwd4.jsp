@@ -52,9 +52,9 @@
 <body style="margin: 0 0 0 0">
 	<div style="background-color: #EFFFD7; widows: 1366px; height: 768px">
 
-		<div style="float: left;">
+		<div style="float: left;padding-left:50px;margin-top:50px">
 			<pre
-				style="font-size: 40px; font-family: Microsoft YaHei; color: #9ACD32; margin: 20px 0px 0px 30px;">欢迎注册Char.Mr</pre>
+				style="font-size: 40px; font-family: Microsoft YaHei; color: #9ACD32; margin: 20px 0px 0px 30px;">Char.Mr</pre>
 		</div>
 
 		
@@ -63,7 +63,7 @@
 					style="position: absolute; right: 1000px; top: 140px">
 			</div>
 			<div id="center2">
-				<div class="content" style="margin: 40px 450px 0px 20px;">
+				<div class="content" style="margin: 50px 0px 0px 160px;">
 					<div class="for-liucheng">
 						<div class="liulist for-cur" id="for-liucheng1"></div>
 						<div class="liulist for-cur"></div>
@@ -100,10 +100,10 @@
 		
 		<div id="foot1"  style="float: left;margin-top:-100px">
 			<span id="foot_content"> <a
-				href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于腾讯</a>
+				href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于char.Mr</a>
 				|<a href="http://kf.qq.com/product/email.html" class="text-muted">客服中心</a>
 				|<a href="#" class="text-muted">联系我们</a> |<a href="#"
-				class="text-muted">帮助中心</a> |<span>©1998 - 2017 Tencent Inc.
+				class="text-muted">帮助中心</a> |<span>@2016 - 2017 char.Mr Inc.
 					All Rights Reserved.</span>
 			</span>
 		</div>

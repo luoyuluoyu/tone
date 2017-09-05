@@ -9,11 +9,9 @@
 <script src="bootstrap/js/jquery.min.js"></script>
 <script src="Js.js"></script>
 <style>
-.web-width {
-	
-	
+body{
+	font-size:16px;
 }
-
 #header {
 	background-color: #2f86f6;
 	font-color: white;
@@ -24,7 +22,7 @@
 #foot1 {
 	margin: 0 auto;
 	width: 1140px;
-	background-color: #f5f5f5;
+	background-color: #EFFFD7;
 	height: 100px;
 	line-height: 100px;
 	text-align: center;
@@ -53,40 +51,33 @@
 
 		<div style="float: left;">
 			<pre
-				style="font-size: 40px; font-family: Microsoft YaHei; color: #9ACD32; margin: 20px 0px 0px 30px;">欢迎注册Char.Mr</pre>
+				style="font-size: 40px; font-family: Microsoft YaHei; color: #9ACD32; margin: 50px 0px 0px 80px;">Char.Mr</pre>
 		</div>
 
 		<img src="image/newLogo1.png"
 			style="position: absolute; right: 1000px; top: 140px">
 		<div class="content">
 			<div class="web-width">
-				<div style="float: left;margin-top: 30px;">
-					<div class="for-liucheng">
-						<div class="liulist for-cur"></div>
-						<div class="liulist for-cur"></div>
-						<div class="liulist for-cur"></div>
-						<div class="liulist"></div>
-						<div class="liutextbox">
-							<div class="liutext for-cur">
-								<em>1</em><br />
-								<strong>填写账户名</strong>
-							</div>
-							<div class="liutext for-cur">
-								<em>2</em><br />
-								<strong>验证身份</strong>
-							</div>
-							<div class="liutext for-cur">
-								<em>3</em><br />
-								<strong>设置新密码</strong>
-							</div>
-							<div class="liutext">
-								<em>4</em><br />
-								<strong>完成</strong>
-							</div>
-						</div>
+			<div class="for-liucheng" style="float: left;margin-left:160px;margin-top: 83px;">
+				<div class="liulist for-cur"></div>
+				<div class="liulist"></div>
+				<div class="liulist"></div>
+				<div class="liulist"></div>
+				<div class="liutextbox">
+					<div class="liutext for-cur">
+						<em>1</em><br /> <strong>填写账户名</strong>
 					</div>
-					<!--for-liucheng/-->
+					<div class="liutext">
+						<em>2</em><br /> <strong>验证身份</strong>
+					</div>
+					<div class="liutext">
+						<em>3</em><br /> <strong>设置新密码</strong>
+					</div>
+					<div class="liutext">
+						<em>4</em><br /> <strong>完成</strong>
+					</div>
 				</div>
+			</div>
 				<form style="margin-left: 400px;line-height:50px" id="getAccount" name="getAccount">
 					<table>
 						<tr>
@@ -106,7 +97,7 @@
 
 					</table>
 					<button onclick="validates('show3',3)"
-						style="height: 30px; width: 100px; margin-right: 170px;">确定</button>
+						style="height: 30px; width: 100px; margin-top:30px;margin-left: 150px;">确定</button>
 					<p id="Verification" style="color: red"></p>
 				</form>
 				<!--forget-pwd/-->
@@ -115,12 +106,12 @@
 		</div>
 		<!--content/-->
 
-		<div id="foot1" style="display: block;font-family:Microsoft YaHei;color:#9ACD32;margin:200x 0px 0px 30px;">
-			<span id="foot_content"> <a
-				href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于腾讯</a>
-				|<a href="http://kf.qq.com/product/email.html" class="text-muted">客服中心</a>
+		<div id="foot1" style="display: block;font-family:Microsoft YaHei;color:#9ACD32;margin:300x 0px 0px 30px;">
+			<span id="foot_content" style="display: block;font-family:Microsoft YaHei;color:#9ACD32;margin: 140px 0px 0px 30px;"> <a
+				href="#" class="text-muted">关于char.Mr</a>
+				|<a href="#" class="text-muted">客服中心</a>
 				|<a href="#" class="text-muted">联系我们</a> |<a href="#"
-				class="text-muted">帮助中心</a> |<span>©1998 - 2017 Tencent Inc.
+				class="text-muted">帮助中心</a> |<span>©2016 - 2017 char.Mr Inc.
 					All Rights Reserved.</span>
 			</span>
 		</div>

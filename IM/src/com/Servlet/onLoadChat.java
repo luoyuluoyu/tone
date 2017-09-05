@@ -66,11 +66,12 @@ public class onLoadChat extends HttpServlet {
 		}else if(act.equals("search")){
 			String getter = request.getParameter("userName");
 			String date = request.getParameter("date");
-			List<Detail> dt = getNewMessage( getter, date);
+			List<Detail> dt = getNewMessage(getter, date);
 			if(dt !=null){
 			JSONArray jsonUsers = new JSONArray(dt);
 			PrintWriter out = response.getWriter();
 			out.print(jsonUsers.toString());
+			//System.out.println(jsonUsers);
 			out.close();
 			}
 		}

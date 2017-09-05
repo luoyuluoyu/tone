@@ -53,7 +53,7 @@ public class Retrieval extends HttpServlet {
 			}
 			PrintWriter outs=resp.getWriter();
 			JSONObject jos = new JSONObject(b);
-			System.out.println(jos);
+			//System.out.println(jos);
 //			out.print("{jo:"+Retrievalpassword+"}");
 			outs.print(jos.toString());
 	        outs.flush();

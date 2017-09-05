@@ -77,4 +77,27 @@ public class MySqlHelper {
 		
 		return result;
 	}
+	
+	public ResultSet exec(String sql) {
+		try {
+			ps = conn.prepareStatement(sql);
+		} catch (SQLException e) {
+			System.out.println("Ö´ÐÐÊý¾Ý¿âÊ§°Ü£¡");
+		}
+		try {
+			rs = ps.executeQuery();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
+	public boolean executeUpdate(String sql) throws SQLException
+	{
+		boolean result;
+		ps = conn.prepareStatement(sql);
+		ps.executeUpdate();
+		result=true;
+		return result;
+	}
 }

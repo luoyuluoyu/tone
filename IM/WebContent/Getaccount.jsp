@@ -6,28 +6,30 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body style="margin:0 auto;background-color:#EFFFD7">
 	<% 	Object conum =  request.getAttribute("conum");
 		int co = (int)conum;
 	%>
 	<center>
-		<div style="background-color: #87CEFA; width: 100%; height: 100px">
-			<img alt="" src="image/logo.png" style="float: left;">
-			<p style="color: #F0F8FF; font-size: 40px; float: left; margin-bottom: 0px;">恭喜成为QQ的一员</p>
+	<div>
+		<div style=" width: 100%; height:100px">
+			<img alt="" src="image/newLogo1.png" style="float: left;">
+			<p style="color: black; font-size: 40px; float: left; margin-bottom: 0px;">欢迎成为char.Mr的一员</p>
+			</div>
+			<div style=" height:100px;height:350px;font-size:30px;margin-top:100px ">
+		<span style="float:left;margin-left:25px">您的账号是：<%=co %>！</span><br>
+		<span style="font-size:30px">未来此账号将作为您的唯一标识，您将使用此账号进行登等操作，请牢记！</span><br>
+		
+		<a href="login.jsp" style="margin:0 auto">返回登录界面</a>
+		
 		</div>
-		<div style=" height:100px;background: url(image/content_background.jpg);no-repeat;height:465px; ">
-		您的账号是：<%=co %>
-		<form action="">
-		<a href="login.jsp">返回登录界面</a>
-		</form>
 		</div>
 
-
-		<div style="margin-top: 30px">
-			<a href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于腾讯</a>
+		<div style="margin-top: 50px">
+			<a href="https://www.tencent.com/zh-cn/index.html" class="text-muted">关于char.Mr</a>
 			|<a href="http://kf.qq.com/product/email.html" class="text-muted">客服中心</a>
 			|<a href="#" class="text-muted">联系我们</a> |<a href="#"
-				class="text-muted">帮助中心</a> |<span>©1998 - 2017 Tencent Inc.
+				class="text-muted">帮助中心</a> |<span>©2016 - 2017 char.Mr Inc.
 				All Rights Reserved.</span>
 		</div>
 	</center>
