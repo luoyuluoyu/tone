@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.entity.Detail;
 import com.service.UserService;
@@ -77,6 +78,27 @@ public class CustomerChat extends HttpServlet {
 			out1.flush();
 			out1.close();
 			break;
+		case "close":
+			String ownNumber = request.getParameter("userName");
+			Login.customerService.remove(ownNumber);
+			Login.customers.remove(ownNumber);
+		default:
+			String userName1 = request.getParameter("userName");
+			String pwd = request.getParameter("pwd");
+			 boolean a = new UserService().updatePassWord(userName1, pwd);
+			String update = "";
+			if(a == true){
+				update = "{updateRs:"+1+"}";
+			}else{
+				update = "{updateRs:"+2+"}";
+			}
+			// Json·µ»Ø
+						PrintWriter out2 = response.getWriter();
+						JSONObject result  = new JSONObject(update);
+						out2.print(result.toString());
+						out2.flush();
+						out2.close();
+						break;
 		}
 	}
 

@@ -126,4 +126,9 @@ public class UserService {
 		UserDao userDao = UserDao.newInstance();
 		return userDao.getUserById(userId);
 	}
+	
+	public boolean updatePassWord(String userName,String pwd){
+		UserDao userDao = UserDao.newInstance();
+		return userDao.updatePassWord(userName, pwd);
+	}
 }

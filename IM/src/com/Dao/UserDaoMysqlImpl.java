@@ -549,5 +549,24 @@ public class UserDaoMysqlImpl extends UserDao {
 			return a;
 		}
 
+		@Override
+		public boolean  updatePassWord(String userName, String pwd) {
+			// TODO Auto-generated method stub
+			
+			MySqlHelper msh = new MySqlHelper();
+	 		boolean a = false;
+			msh.open();
+			
+			try {
+				a = msh.executeUpdate("update users set password='"+pwd+"'where Accountnumber='"+Integer.parseInt(userName)+"'");
+			
+			} catch (SQLException e) {
+
+				e.printStackTrace();
+			}
+			msh.close();
+			return a;
+		}
+
 }
 

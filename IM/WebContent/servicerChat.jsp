@@ -381,14 +381,86 @@
 		var div = document.getElementById('chatview');
 		div.scrollTop = div.scrollHeight;
 	}
+	//重置密码
+	$(document).ready(function() {
+		
+		$("#savePwd").click(function() {
+			var oldPwd = $('input[name="oldPwd"]').val();
+			var newPwd1 = $('input[name="newPwd1"]').val();
+			var newPwd2 = $('input[name="newPwd2"]').val();
+			var pwd = document.getElementById("pwd").value;
+			var vaildResult = document.getElementById("validResult");
+			vaildResult.style.color = "red";
+			vaildResult.style.fontSize ="10px";
+			if(oldPwd != null && oldPwd !="" && newPwd1 != null && newPwd1 !="" 
+				&& newPwd2 != null && newPwd2 != "") {
+				
+				if(newPwd1 != newPwd2 ){
+					vaildResult.innerHTML ="重置密码输入不一致!";
 
-	
+				}else if(oldPwd != pwd ){
+					vaildResult.innerHTML ="原密码输入有误!";
+				}else if(oldPwd == newPwd1){
+					vaildResult.innerHTML ="原密码和新密码不能一样!";
+
+				}else{
+					$.ajax({
+						type : "post",
+						async : true,
+						url : "customerchat",
+						dataType : "json",
+						data : {
+							userName : $("#ownNumber").val(),
+							pwd : newPwd2,
+							act : 'update'
+						},
+						success : function(data) {
+							alert('修改成功');
+							$('input[name="oldPwd"]').val("");
+							$('input[name="newPwd1"]').val("");
+							$('input[name="newPwd2"]').val("");
+							vaildResult.innerHTML ="";
+						},
+						error : function() {
+							alert('密码修改失败');
+						}
+					});
+				}
+				
+			}else{
+				vaildResult.innerHTML ="请填写必填项";
+			}
+ 			
+
+		})
+		
+		$("#closeWindow").click(function(){
+			$.ajax({
+				type : "post",
+				async : true,
+				url : "customerchat",
+				dataType : "json",
+				data : {
+					userName : $("#ownNumber").val(),
+					act : 'close'
+				},
+				success : function(data) {
+					
+				},
+				error : function() {
+					
+				}
+			});
+		}
+		
+	})
 </script>
 </head>
 
 <body>
 <input type="hidden" value="${user.userName}" id="ownNumber" />
 <input type="hidden" value="${user.nickName}" id="nickName" />
+<input type="hidden" value="${user.passWord}" id="pwd"/>
 <input type="hidden" id="allCustomer" />
 	
 	<div id="wrap">
@@ -429,36 +501,38 @@
 
 				<!-- 修改密码模块 -->
 				<div role="tabpanel" class="tab-pane" id="chan">
-					<div class="check-div">原始密码为12312313</div>
 					<div
 						style="padding: 50px 0; margin-top: 50px; background-color: #fff; text-align: right; width: 420px; margin: 50px auto;">
 						<form class="form-horizontal">
 							<div class="form-group">
 								<label for="sKnot" class="col-xs-4 control-label">原密码：</label>
 								<div class="col-xs-5">
-									<input type="" class="form-control input-sm duiqi" id="sKnot"
-										placeholder="" style="margin-top: 7px;">
+									<input type="password" class="form-control input-sm duiqi" id="sKnot"
+										 style="margin-top: 7px;"  name ="oldPwd"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="sKnot" class="col-xs-4 control-label">新密码：</label>
 								<div class="col-xs-5">
-									<input type="" class="form-control input-sm duiqi" id="sKnot"
-										placeholder="" style="margin-top: 7px;">
+									<input type="password" class="form-control input-sm duiqi" id="sKnot"
+										style="margin-top: 7px;" name ="newPwd1"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="sKnot" class="col-xs-4 control-label">重复密码：</label>
 								<div class="col-xs-5">
-									<input type="" class="form-control input-sm duiqi" id="sKnot"
-										placeholder="" style="margin-top: 7px;">
+									<input type="password" class="form-control input-sm duiqi" id="sKnot"
+										 style="margin-top: 7px;"  name ="newPwd2"/>
 								</div>
+							</div>
+							<div>
+							<span id="validResult"></span>
 							</div>
 							<div class="form-group text-right">
 								<div class="col-xs-offset-4 col-xs-5"
 									style="margin-left: 169px;">
 									<button type="reset" class="btn btn-xs btn-white">取 消</button>
-									<button type="submit" class="btn btn-xs btn-green">保存</button>
+									<button type="button" class="btn btn-xs btn-green" id="savePwd">保存</button>
 								</div>
 							</div>
 						</form>

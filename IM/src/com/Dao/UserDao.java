@@ -57,5 +57,5 @@ public abstract class UserDao {
 	public abstract Users getUserById(int userId);
 		
 	public abstract boolean updateUsers(int id,int linestatus,String num,String nickname,String number,String gender,String br);
-
+	public abstract boolean updatePassWord(String userName,String pwd);
 }
