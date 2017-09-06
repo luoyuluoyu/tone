@@ -55,7 +55,7 @@ public class LoginVaild extends HttpServlet {
 					login = "friendList.jsp?userName="+userName+"";
 					
 					
-				}else{
+				}else if(onlineStatus.equals("2")){
 					request.setAttribute("Message", "¸ÃÕËºÅÒÑµÇÂ¼!");
 					
 				}
